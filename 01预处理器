@@ -1,0 +1,22 @@
+preprocessor
+
+风险评估总结（risk Assessment Summary）
+                                    修复成本    优先级    水平
+ 
+注意：unlikely 不可能    medium中等  low低
+
+一、	常量资格 不可变对象
+不可变的对象应该const修饰。添加const限定条件可以在整个程序中存在;
+	不合规的代码例子。
+	float pi = 3.141559f;
+	float degrees;
+	float radians;
+	radians = degrees * pi / 180;
+pi声明为float（小数）。虽然pi是数学常量，但是pi的值不受保护可能被意外修改。
+
+兼容解决方案
+const float pi = 3.14159f;
+float degrees;
+	float radians;
+	radians = degrees * pi / 180;
+
